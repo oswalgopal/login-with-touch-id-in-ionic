@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Enter the message to be sent</ion-label>
+    <ion-input [(ngModel)]="Message"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="email.length">
+    {{email | json}}
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Enter the mail Id</ion-label>
+    <ion-input [(ngModel)]="tempEmail"></ion-input>
+  </ion-item>
+  <ion-button (click)="addnewEmail()">
+    Add new email
+  </ion-button>
+  <ion-buttons>
+    <ion-button (click)="share()">Share</ion-button>
+    <ion-button (click)="whatsapp()">whatsapp</ion-button>
+    <ion-button (click)="shareviaMail()">email</ion-button>
+  </ion-buttons>
+  <ion-button (click)="selectImage()">image picker</ion-button>
+  <ion-button (click)="sendSMS()">SMS sender</ion-button>
+</ion-content>

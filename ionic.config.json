@@ -1,0 +1,7 @@
+{
+  "name": "touchID ",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
